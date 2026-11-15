@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aykut Mayali | AI-built app launch audit &amp; production readiness</title>
+<meta name="description" content="Make your Lovable, Bolt, Cursor or Replit app safe for real users and real payments. Launch audit in 48 hours. English / Türkçe.">
+<meta property="og:title" content="AI-built app launch audit | Aykut Mayali">
+<meta property="og:description" content="Security, payments, CI/CD and monitoring for vibe-coded apps. Report in 48 hours.">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  html{scroll-behavior:smooth}
+  [data-tr]{} .lang-tr [data-en-only]{display:none} .lang-en [data-tr-only]{display:none}
+</style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased lang-en">
+
+<!-- NAV -->
+<header class="sticky top-0 z-20 bg-slate-950/90 backdrop-blur border-b border-slate-800">
+  <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="#" class="font-semibold tracking-tight">Aykut Mayali<span class="text-emerald-400">.</span></a>
+    <nav class="hidden md:flex gap-6 text-sm text-slate-300">
+      <a href="#checks" data-en="What I check" data-tr="Neyi kontrol ediyorum">What I check</a>
+      <a href="#packages" data-en="Packages" data-tr="Paketler">Packages</a>
+      <a href="#sample-audit" data-en="Sample audit" data-tr="Örnek rapor">Sample audit</a>
+      <a href="#faq" data-en="FAQ" data-tr="SSS">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-2 text-sm">
+      <button id="btn-en" class="px-2 py-1 rounded bg-emerald-500 text-slate-950 font-semibold">EN</button>
+      <button id="btn-tr" class="px-2 py-1 rounded border border-slate-700">TR</button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="max-w-6xl mx-auto px-5 pt-16 pb-12 grid md:grid-cols-2 gap-10 items-center">
+  <div>
+    <p class="text-emerald-400 text-sm font-semibold uppercase tracking-wider" data-en="Lovable · Bolt · Cursor · Replit · v0" data-tr="Lovable · Bolt · Cursor · Replit · v0">Lovable · Bolt · Cursor · Replit · v0</p>
+    <h1 class="mt-3 text-4xl md:text-5xl font-bold leading-tight" data-en="Your AI-built app works as a demo. I make it safe for real users and real payments." data-tr="Yapay zekâyla yaptığın uygulama demo olarak çalışıyor. Ben onu gerçek kullanıcılar ve gerçek ödemeler için güvenli hale getiriyorum.">Your AI-built app works as a demo. I make it safe for real users and real payments.</h1>
+    <p class="mt-5 text-slate-300 text-lg" data-en="Launch audit in 48 hours: data leaks, exposed keys, broken auth, payment webhooks, deploy and backups. Ranked by risk, with a fixed price for each fix." data-tr="48 saatte canlıya çıkış incelemesi: veri sızıntısı, açıkta kalan anahtarlar, hatalı giriş sistemi, ödeme webhook'ları, deploy ve yedekleme. Risk sırasına göre, her düzeltme için sabit fiyatla.">Launch audit in 48 hours: data leaks, exposed keys, broken auth, payment webhooks, deploy and backups. Ranked by risk, with a fixed price for each fix.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="https://cal.com/aykut-ovvudn/30min" class="px-5 py-3 rounded-lg bg-emerald-500 text-slate-950 font-semibold hover:bg-emerald-400" data-en="Book a free 15-min check" data-tr="Ücretsiz 15 dk ön görüşme">Book a free 15-min check</a>
+      <a href="#sample-audit" class="px-5 py-3 rounded-lg border border-slate-700 hover:border-slate-500" data-en="See a sample report" data-tr="Örnek raporu gör">See a sample report</a>
+    </div>
+    <p class="mt-4 text-xs text-slate-500" data-en="Read-only access by invite. I never ask for your passwords." data-tr="Sadece davetle, okuma yetkisiyle erişim. Şifreni asla istemem.">Read-only access by invite. I never ask for your passwords.</p>
+  </div>
+  <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6 shadow-2xl">
+    <p class="text-sm text-slate-400" data-en="Typical first-scan findings" data-tr="İlk taramada sık çıkan bulgular">Typical first-scan findings</p>
+    <ul class="mt-4 space-y-3 text-sm">
+      <li class="flex gap-3"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300 font-mono text-xs">CRITICAL</span><span data-en="Any logged-in user can read every customer's orders" data-tr="Giriş yapan her kullanıcı tüm müşterilerin siparişlerini okuyabiliyor">Any logged-in user can read every customer's orders</span></li>
+      <li class="flex gap-3"><span class="px-2 py-0.5 rounded bg-red-500/20 text-red-300 font-mono text-xs">CRITICAL</span><span data-en="Secret API key shipped in the browser bundle" data-tr="Gizli API anahtarı tarayıcıya giden kodun içinde">Secret API key shipped in the browser bundle</span></li>
+      <li class="flex gap-3"><span class="px-2 py-0.5 rounded bg-orange-500/20 text-orange-300 font-mono text-xs">HIGH</span><span data-en="Payment webhook not verified; paid users sometimes never get access" data-tr="Ödeme webhook'u doğrulanmıyor; ödeme yapan kullanıcı bazen erişim alamıyor">Payment webhook not verified; paid users sometimes never get access</span></li>
+      <li class="flex gap-3"><span class="px-2 py-0.5 rounded bg-yellow-500/20 text-yellow-300 font-mono text-xs">MEDIUM</span><span data-en="No backups, no error tracking, deploys by hand" data-tr="Yedek yok, hata takibi yok, deploy elle yapılıyor">No backups, no error tracking, deploys by hand</span></li>
+    </ul>
+    <p class="mt-4 text-xs text-slate-500" data-en="Illustrative examples of common issue types, not a specific client." data-tr="Sık görülen sorun türlerine örnektir, belirli bir müşteriye ait değildir.">Illustrative examples of common issue types, not a specific client.</p>
+  </div>
+</section>
+
+<!-- PROOF -->
+<section class="border-y border-slate-800 bg-slate-900/50">
+  <div class="max-w-6xl mx-auto px-5 py-10 grid md:grid-cols-4 gap-6 text-center">
+    <div><p class="text-3xl font-bold text-emerald-400">7+</p><p class="text-sm text-slate-400" data-en="years in software engineering" data-tr="yıl yazılım mühendisliği">years in software engineering</p></div>
+    <div><p class="text-3xl font-bold text-emerald-400">350K–400K</p><p class="text-sm text-slate-400" data-en="monthly users on the e-commerce ecosystem I worked on" data-tr="aylık kullanıcı: çalıştığım e-ticaret ekosistemi">monthly users on the e-commerce ecosystem I worked on</p></div>
+    <div><p class="text-3xl font-bold text-emerald-400">3</p><p class="text-sm text-slate-400" data-en="e-commerce companies with payment work: Altinyildiz, Akinon, OSF Digital (Sephora France)" data-tr="ödeme işi yaptığım e-ticaret şirketi: Altınyıldız, Akinon, OSF Digital (Sephora France)">e-commerce companies with payment work: Altinyildiz, Akinon, OSF Digital (Sephora France)</p></div>
+    <div><p class="text-3xl font-bold text-emerald-400">EN / TR</p><p class="text-sm text-slate-400" data-en="reports in English or Turkish" data-tr="rapor İngilizce veya Türkçe">reports in English or Turkish</p></div>
+  </div>
+</section>
+
+<!-- CHECKS -->
+<section id="checks" class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="text-3xl font-bold" data-en="What I check before launch" data-tr="Canlıya çıkmadan önce neyi kontrol ediyorum">What I check before launch</h2>
+  <div class="mt-8 grid md:grid-cols-3 gap-5">
+    <div class="rounded-xl border border-slate-800 p-5"><h3 class="font-semibold" data-en="Data access" data-tr="Veri erişimi">Data access</h3><p class="mt-2 text-sm text-slate-400" data-en="Row-level security and database rules, so users only see their own data." data-tr="Satır bazlı güvenlik ve veritabanı kuralları; her kullanıcı sadece kendi verisini görür.">Row-level security and database rules, so users only see their own data.</p></div>
+    <div class="rounded-xl border border-slate-800 p-5"><h3 class="font-semibold" data-en="Secrets &amp; keys" data-tr="Gizli anahtarlar">Secrets &amp; keys</h3><p class="mt-2 text-sm text-slate-400" data-en="API keys in the browser or repo, moved server-side and rotated." data-tr="Tarayıcıda ya da repoda kalan API anahtarları; sunucuya taşınır ve yenilenir.">API keys in the browser or repo, moved server-side and rotated.</p></div>
+    <div class="rounded-xl border border-slate-800 p-5"><h3 class="font-semibold" data-en="Authentication" data-tr="Giriş sistemi">Authentication</h3><p class="mt-2 text-sm text-slate-400" data-en="Login, sessions, password reset and unprotected admin routes." data-tr="Giriş, oturumlar, şifre sıfırlama ve korumasız admin sayfaları.">Login, sessions, password reset and unprotected admin routes.</p></div>
+    <div class="rounded-xl border border-slate-800 p-5"><h3 class="font-semibold" data-en="Payments" data-tr="Ödemeler">Payments</h3><p class="mt-2 text-sm text-slate-400" data-en="Webhook verification, duplicate events, refunds, access that never unlocks." data-tr="Webhook doğrulama, tekrarlanan olaylar, iadeler, açılmayan erişimler.">Webhook verification, duplicate events, refunds, access that never unlocks.</p></div>
+    <div class="rounded-xl border border-slate-800 p-5"><h3 class="font-semibold" data-en="Deploy &amp; CI/CD" data-tr="Deploy ve CI/CD">Deploy &amp; CI/CD</h3><p class="mt-2 text-sm text-slate-400" data-en="&quot;Works in preview, fails in production&quot;: env vars, migrations, pipelines." data-tr="&quot;Önizlemede çalışıyor, canlıda bozuluyor&quot;: ortam değişkenleri, migration'lar, pipeline'lar.">"Works in preview, fails in production": env vars, migrations, pipelines.</p></div>
+    <div class="rounded-xl border border-slate-800 p-5"><h3 class="font-semibold" data-en="Monitoring &amp; backups" data-tr="İzleme ve yedekleme">Monitoring &amp; backups</h3><p class="mt-2 text-sm text-slate-400" data-en="Error tracking, uptime alerts, logs, tested restores and cost alerts." data-tr="Hata takibi, erişilebilirlik uyarıları, loglar, test edilmiş geri yükleme ve maliyet uyarıları.">Error tracking, uptime alerts, logs, tested restores and cost alerts.</p></div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages" class="bg-slate-900/50 border-y border-slate-800">
+  <div class="max-w-6xl mx-auto px-5 py-16">
+    <h2 class="text-3xl font-bold" data-en="Packages" data-tr="Paketler">Packages</h2>
+    <p class="mt-2 text-slate-400" data-en="Fixed prices. You see the price before any work starts." data-tr="Sabit fiyat. İş başlamadan fiyatı görürsün.">Fixed prices. You see the price before any work starts.</p>
+    <div class="mt-8 grid md:grid-cols-3 gap-5">
+      <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+        <h3 class="font-semibold text-lg" data-en="Launch audit" data-tr="Canlıya çıkış incelemesi">Launch audit</h3>
+        <p class="mt-2 text-3xl font-bold">$199</p>
+        <p class="text-sm text-slate-400" data-en="Report in 48 hours" data-tr="48 saatte rapor">Report in 48 hours</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc pl-5">
+          <li data-en="All six areas checked" data-tr="Altı alanın hepsi kontrol edilir">All six areas checked</li>
+          <li data-en="Risk-ranked written report" data-tr="Risk sırasına göre yazılı rapor">Risk-ranked written report</li>
+          <li data-en="Fixed price for each fix" data-tr="Her düzeltme için sabit fiyat">Fixed price for each fix</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border-2 border-emerald-500 bg-slate-950 p-6">
+        <p class="text-xs font-semibold text-emerald-400 uppercase" data-en="Most popular" data-tr="En çok tercih edilen">Most popular</p>
+        <h3 class="font-semibold text-lg" data-en="Production-ready" data-tr="Canlıya hazır paket">Production-ready</h3>
+        <p class="mt-2 text-3xl font-bold" data-en="from $990" data-tr="990$'dan başlayan">from $990</p>
+        <p class="text-sm text-slate-400" data-en="About 1 week" data-tr="Yaklaşık 1 hafta">About 1 week</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc pl-5">
+          <li data-en="Critical and high issues fixed (as pull requests)" data-tr="Kritik ve yüksek riskli sorunlar düzeltilir (pull request olarak)">Critical and high issues fixed (as pull requests)</li>
+          <li data-en="CI/CD pipeline, monitoring, backups" data-tr="CI/CD pipeline, izleme, yedekleme">CI/CD pipeline, monitoring, backups</li>
+          <li data-en="Short runbook for your team" data-tr="Ekibin için kısa işletim kılavuzu">Short runbook for your team</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-slate-800 bg-slate-950 p-6">
+        <h3 class="font-semibold text-lg" data-en="Monthly care" data-tr="Aylık bakım">Monthly care</h3>
+        <p class="mt-2 text-3xl font-bold" data-en="from $249/mo" data-tr="aylık 249$'dan">from $249/mo</p>
+        <p class="text-sm text-slate-400" data-en="Cancel anytime" data-tr="İstediğin zaman iptal">Cancel anytime</p>
+        <ul class="mt-4 space-y-2 text-sm text-slate-300 list-disc pl-5">
+          <li data-en="I review AI-generated changes before production" data-tr="Yapay zekânın ürettiği değişiklikleri canlıya çıkmadan incelerim">I review AI-generated changes before production</li>
+          <li data-en="Dependency and security updates" data-tr="Bağımlılık ve güvenlik güncellemeleri">Dependency and security updates</li>
+          <li data-en="Monthly health report" data-tr="Aylık sağlık raporu">Monthly health report</li>
+        </ul>
+      </div>
+    </div>
+    <p class="mt-4 text-xs text-slate-500" data-en="Turkish clients: TRY pricing and invoicing on request." data-tr="Türkiye'deki müşteriler için TL fiyat ve fatura seçeneği mevcuttur.">Turkish clients: TRY pricing and invoicing on request.</p>
+  </div>
+</section>
+
+<!-- SAMPLE AUDIT -->
+<section id="sample-audit" class="max-w-6xl mx-auto px-5 py-16">
+  <h2 class="text-3xl font-bold" data-en="Sample audit report" data-tr="Örnek inceleme raporu">Sample audit report</h2>
+  <p class="mt-2 text-slate-400" data-en="An excerpt from an audit of a demo app built on purpose with common mistakes. It is not a client project." data-tr="Bilerek yaygın hatalarla yapılmış bir demo uygulamanın inceleme raporundan bir bölüm. Gerçek bir müşteri projesi değildir.">An excerpt from an audit of a demo app built on purpose with common mistakes. It is not a client project.</p>
+  <div class="mt-8 rounded-2xl border border-slate-800 bg-slate-900 overflow-hidden">
+    <div class="px-6 py-4 border-b border-slate-800 flex flex-wrap justify-between gap-2 text-sm">
+      <span class="font-mono">demo-shop.example — Launch audit</span>
+      <span class="text-slate-400" data-en="Score: 41/100 · 2 critical · 2 high · 3 medium" data-tr="Puan: 41/100 · 2 kritik · 2 yüksek · 3 orta">Score: 41/100 · 2 critical · 2 high · 3 medium</span>
+    </div>
+    <div class="overflow-x-auto"><table class="w-full text-sm min-w-[720px]">
+      <thead class="text-left text-slate-400 bg-slate-950/50">
+        <tr><th class="px-6 py-3">#</th><th class="px-6 py-3" data-en="Finding" data-tr="Bulgu">Finding</th><th class="px-6 py-3" data-en="Risk" data-tr="Risk">Risk</th><th class="px-6 py-3" data-en="Fix" data-tr="Çözüm">Fix</th><th class="px-6 py-3" data-en="Effort" data-tr="Süre">Effort</th></tr>
+      </thead>
+      <tbody class="divide-y divide-slate-800">
+        <tr><td class="px-6 py-3">1</td><td class="px-6 py-3" data-en="orders table readable by any logged-in user (no row-level rule)" data-tr="orders tablosu giriş yapan herkes tarafından okunabiliyor (satır kuralı yok)">orders table readable by any logged-in user (no row-level rule)</td><td class="px-6 py-3 text-red-300">Critical</td><td class="px-6 py-3" data-en="Add owner-only read/write policy, test with 2 users" data-tr="Sadece sahibine okuma/yazma kuralı, 2 kullanıcıyla test">Add owner-only read/write policy, test with 2 users</td><td class="px-6 py-3">1h</td></tr>
+        <tr><td class="px-6 py-3">2</td><td class="px-6 py-3" data-en="Service/admin key bundled into client JavaScript" data-tr="Servis/admin anahtarı tarayıcı JavaScript'ine gömülmüş">Service/admin key bundled into client JavaScript</td><td class="px-6 py-3 text-red-300">Critical</td><td class="px-6 py-3" data-en="Move call to a server function, rotate key" data-tr="Çağrıyı sunucu fonksiyonuna taşı, anahtarı yenile">Move call to a server function, rotate key</td><td class="px-6 py-3">2h</td></tr>
+        <tr><td class="px-6 py-3">3</td><td class="px-6 py-3" data-en="Payment webhook accepts unsigned requests; no idempotency" data-tr="Ödeme webhook'u imzasız istekleri kabul ediyor; tekrar koruması yok">Payment webhook accepts unsigned requests; no idempotency</td><td class="px-6 py-3 text-orange-300">High</td><td class="px-6 py-3" data-en="Verify signature, store event IDs, return 200 only after commit" data-tr="İmzayı doğrula, olay ID'lerini sakla, kayıttan sonra 200 dön">Verify signature, store event IDs, return 200 only after commit</td><td class="px-6 py-3">3h</td></tr>
+        <tr><td class="px-6 py-3">4</td><td class="px-6 py-3" data-en="/admin route only hidden in the menu, not protected" data-tr="/admin sayfası sadece menüden gizlenmiş, korunmuyor">/admin route only hidden in the menu, not protected</td><td class="px-6 py-3 text-orange-300">High</td><td class="px-6 py-3" data-en="Server-side role check on every admin request" data-tr="Her admin isteğinde sunucu tarafında rol kontrolü">Server-side role check on every admin request</td><td class="px-6 py-3">1h</td></tr>
+        <tr><td class="px-6 py-3">5</td><td class="px-6 py-3" data-en="No automated backups; restore never tested" data-tr="Otomatik yedek yok; geri yükleme hiç denenmemiş">No automated backups; restore never tested</td><td class="px-6 py-3 text-yellow-300">Medium</td><td class="px-6 py-3" data-en="Daily backup + monthly restore test" data-tr="Günlük yedek + aylık geri yükleme testi">Daily backup + monthly restore test</td><td class="px-6 py-3">1h</td></tr>
+      </tbody>
+    </table></div>
+    <div class="px-6 py-4 text-sm text-slate-400 border-t border-slate-800" data-en="Each finding in the full report includes: how it was found, how to reproduce it safely, the business impact in plain language, and a fixed price." data-tr="Tam rapordaki her bulguda şunlar var: nasıl bulunduğu, güvenli şekilde nasıl tekrarlanacağı, iş etkisi (sade dille) ve sabit fiyat.">Each finding in the full report includes: how it was found, how to reproduce it safely, the business impact in plain language, and a fixed price.</div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="bg-slate-900/50 border-y border-slate-800">
+  <div class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-3 gap-10">
+    <div>
+      <h2 class="text-3xl font-bold" data-en="Who you work with" data-tr="Kiminle çalışıyorsun">Who you work with</h2>
+      <p class="mt-3 text-slate-400">Aykut Mayali</p>
+      <p class="text-sm text-slate-500" data-en="AI Integration &amp; Software Consultant · Türkiye · remote" data-tr="Yapay Zekâ Entegrasyonu ve Yazılım Danışmanı · Türkiye · uzaktan">AI Integration &amp; Software Consultant · Türkiye · remote</p>
+    </div>
+    <ul class="md:col-span-2 space-y-4 text-slate-300">
+      <li data-en="&lt;b&gt;Altinyildiz / BR Magazacilik (2024–2026):&lt;/b&gt; architecture and delivery for a four-brand e-commerce ecosystem serving 350K–400K monthly users: payment processing, security, search and CI/CD on Azure." data-tr="&lt;b&gt;Altınyıldız / BR Mağazacılık (2024–2026):&lt;/b&gt; aylık 350–400 bin kullanıcılı, 4 markalı e-ticaret ekosisteminde mimari ve geliştirme: ödeme, güvenlik, arama ve Azure üzerinde CI/CD."><b>Altinyildiz / BR Magazacilik (2024–2026):</b> architecture and delivery for a four-brand e-commerce ecosystem serving 350K–400K monthly users: payment processing, security, search and CI/CD on Azure.</li>
+      <li data-en="&lt;b&gt;Akinon (2022–2024):&lt;/b&gt; e-commerce web services, marketplace APIs and payment integrations with Python, Django and PostgreSQL." data-tr="&lt;b&gt;Akinon (2022–2024):&lt;/b&gt; Python, Django ve PostgreSQL ile e-ticaret servisleri, pazaryeri API'leri ve ödeme entegrasyonları."><b>Akinon (2022–2024):</b> e-commerce web services, marketplace APIs and payment integrations with Python, Django and PostgreSQL.</li>
+      <li data-en="&lt;b&gt;OSF Digital (2020–2022):&lt;/b&gt; e-commerce integrations and payment workflows for Sephora France." data-tr="&lt;b&gt;OSF Digital (2020–2022):&lt;/b&gt; Sephora France için e-ticaret entegrasyonları ve ödeme akışları."><b>OSF Digital (2020–2022):</b> e-commerce integrations and payment workflows for Sephora France.</li>
+      <li data-en="&lt;b&gt;Stack:&lt;/b&gt; React, Next.js, TypeScript, Node.js, .NET/C#, Python (FastAPI, Django), PostgreSQL, SQL Server, Redis, Docker, Kubernetes (AKS), Azure DevOps, GitHub Actions, LLM APIs." data-tr="&lt;b&gt;Teknolojiler:&lt;/b&gt; React, Next.js, TypeScript, Node.js, .NET/C#, Python (FastAPI, Django), PostgreSQL, SQL Server, Redis, Docker, Kubernetes (AKS), Azure DevOps, GitHub Actions, LLM API'leri."><b>Stack:</b> React, Next.js, TypeScript, Node.js, .NET/C#, Python (FastAPI, Django), PostgreSQL, SQL Server, Redis, Docker, Kubernetes (AKS), Azure DevOps, GitHub Actions, LLM APIs.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="max-w-4xl mx-auto px-5 py-16">
+  <h2 class="text-3xl font-bold" data-en="FAQ" data-tr="Sık sorulan sorular">FAQ</h2>
+  <div class="mt-6 space-y-4">
+    <details class="rounded-xl border border-slate-800 p-5"><summary class="font-semibold cursor-pointer" data-en="Do you need my passwords?" data-tr="Şifrelerime ihtiyacın var mı?">Do you need my passwords?</summary><p class="mt-2 text-slate-400" data-en="No. You invite me to the repo and services with the lowest access needed, and remove me afterwards." data-tr="Hayır. Beni repoya ve servislere gereken en düşük yetkiyle davet edersin, iş bitince çıkarırsın.">No. You invite me to the repo and services with the lowest access needed, and remove me afterwards.</p></details>
+    <details class="rounded-xl border border-slate-800 p-5"><summary class="font-semibold cursor-pointer" data-en="I don't code. Will I understand the report?" data-tr="Kod bilmiyorum. Raporu anlayabilir miyim?">I don't code. Will I understand the report?</summary><p class="mt-2 text-slate-400" data-en="Yes. Every finding has a plain-language explanation of the business risk, plus technical detail for whoever fixes it." data-tr="Evet. Her bulgunun iş riskini sade dille anlatan bir açıklaması, düzeltecek kişi için de teknik detayı var.">Yes. Every finding has a plain-language explanation of the business risk, plus technical detail for whoever fixes it.</p></details>
+    <details class="rounded-xl border border-slate-800 p-5"><summary class="font-semibold cursor-pointer" data-en="Do I have to leave Lovable / Bolt?" data-tr="Lovable / Bolt'u bırakmam gerekiyor mu?">Do I have to leave Lovable / Bolt?</summary><p class="mt-2 text-slate-400" data-en="No. Most fixes work with your current tools. If moving to your own hosting makes sense, I'll explain why and what it costs." data-tr="Hayır. Çoğu düzeltme mevcut araçlarınla çalışır. Kendi altyapına geçmek mantıklıysa nedenini ve maliyetini açıklarım.">No. Most fixes work with your current tools. If moving to your own hosting makes sense, I'll explain why and what it costs.</p></details>
+    <details class="rounded-xl border border-slate-800 p-5"><summary class="font-semibold cursor-pointer" data-en="Turkish clients and KVKK?" data-tr="Türkiye'deki müşteriler ve KVKK?">Turkish clients and KVKK?</summary><p class="mt-2 text-slate-400" data-en="Reports are available in Turkish. I flag personal-data handling issues; for legal compliance advice, work with a lawyer." data-tr="Raporlar Türkçe de hazırlanır. Kişisel veri işleme sorunlarını işaretlerim; hukuki uyum danışmanlığı için bir avukatla çalışmanı öneririm.">Reports are available in Turkish. I flag personal-data handling issues; for legal compliance advice, work with a lawyer.</p></details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="border-t border-slate-800">
+  <div class="max-w-4xl mx-auto px-5 py-16 text-center">
+    <h2 class="text-3xl font-bold" data-en="Send me your app link and what worries you most" data-tr="Uygulamanın linkini ve seni en çok neyin endişelendirdiğini gönder">Send me your app link and what worries you most</h2>
+    <p class="mt-3 text-slate-400" data-en="I'll reply with what I'd check first, free." data-tr="İlk neye bakacağımı ücretsiz olarak yazarım.">I'll reply with what I'd check first, free.</p>
+    <div class="mt-8 flex flex-wrap justify-center gap-3">
+      <a href="https://cal.com/aykut-ovvudn/30min" class="px-5 py-3 rounded-lg bg-emerald-500 text-slate-950 font-semibold" data-en="Book a call" data-tr="Görüşme ayarla">Book a call</a>
+      <a href="mailto:aykutmayali@gmail.com" class="px-5 py-3 rounded-lg border border-slate-700" data-en="Email me" data-tr="E-posta gönder">Email me</a>
+      <a href="https://www.upwork.com/freelancers/~01fc934a613be9241e" class="px-5 py-3 rounded-lg border border-slate-700" data-en="Hire on Upwork" data-tr="Upwork üzerinden çalış">Hire on Upwork</a>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-slate-800 py-6 text-center text-xs text-slate-500">
+  © 2026 Aykut Mayali · <a href="https://github.com/aykutmayali" class="underline">GitHub</a> · <a href="https://linkedin.com/in/aykutmayali" class="underline">LinkedIn</a>
+</footer>
+
+<script>
+  function setLang(l){
+    document.documentElement.lang=l;
+    document.body.classList.toggle('lang-tr',l==='tr');document.body.classList.toggle('lang-en',l==='en');
+    document.querySelectorAll('[data-en]').forEach(function(el){el.innerHTML=el.getAttribute('data-'+l);});
+    document.getElementById('btn-en').className='px-2 py-1 rounded '+(l==='en'?'bg-emerald-500 text-slate-950 font-semibold':'border border-slate-700');
+    document.getElementById('btn-tr').className='px-2 py-1 rounded '+(l==='tr'?'bg-emerald-500 text-slate-950 font-semibold':'border border-slate-700');
+    try{localStorage.setItem('lang',l)}catch(e){}
+    var u=new URL(location.href);u.searchParams.set('lang',l);history.replaceState(null,'',u);
+  }
+  document.getElementById('btn-en').onclick=function(){setLang('en')};
+  document.getElementById('btn-tr').onclick=function(){setLang('tr')};
+  var q=new URLSearchParams(location.search).get('lang');
+  var saved=null;try{saved=localStorage.getItem('lang')}catch(e){}
+  setLang(q||saved||((navigator.language||'').toLowerCase().startsWith('tr')?'tr':'en'));
+</script>
+</body>
+</html>
