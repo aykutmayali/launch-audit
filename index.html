@@ -22,6 +22,7 @@
     <nav class="hidden md:flex gap-6 text-sm text-slate-300">
       <a href="#checks" data-en="What I check" data-tr="Neyi kontrol ediyorum">What I check</a>
       <a href="#packages" data-en="Packages" data-tr="Paketler">Packages</a>
+      <a href="#retrace-exit" data-en="Retrace Exit" data-tr="Retrace Exit">Retrace Exit</a>
       <a href="#sample-audit" data-en="Sample audit" data-tr="Örnek rapor">Sample audit</a>
       <a href="#faq" data-en="FAQ" data-tr="SSS">FAQ</a>
     </nav>
@@ -118,6 +119,75 @@
       </div>
     </div>
     <p class="mt-4 text-xs text-slate-500" data-en="Turkish clients: TRY pricing and invoicing on request." data-tr="Türkiye'deki müşteriler için TL fiyat ve fatura seçeneği mevcuttur.">Turkish clients: TRY pricing and invoicing on request.</p>
+  </div>
+</section>
+
+<!-- RETRACE EXIT -->
+<section id="retrace-exit" class="max-w-6xl mx-auto px-5 py-16">
+  <div class="rounded-2xl border border-orange-500/30 bg-gradient-to-br from-slate-900 to-slate-950 p-8 md:p-10">
+    <p class="text-orange-400 text-sm font-semibold uppercase tracking-wider" data-en="Stackify Retrace · End of Life · 31 March 2027" data-tr="Stackify Retrace · Hizmet Sonu · 31 Mart 2027">Stackify Retrace · End of Life · 31 March 2027</p>
+    <h2 class="mt-3 text-3xl md:text-4xl font-bold" data-en="Retrace shuts down: I move .NET apps to OpenTelemetry" data-tr="Retrace kapanıyor: .NET uygulamalarını OpenTelemetry'ye taşıyorum">Retrace shuts down: I move .NET apps to OpenTelemetry</h2>
+    <p class="mt-4 text-slate-300 text-lg max-w-3xl" data-en="BMC Helix is retiring Stackify Retrace on 31 March 2027. Because it is SaaS-only, you will not be able to log in, send data, or read stored data after that date. There is no automated migration." data-tr="BMC Helix, Stackify Retrace'i 31 Mart 2027'de emekli ediyor. SaaS olduğu için o tarihten sonra giriş, veri gönderimi ve kayıtlı verilere erişim yok. Otomatik göç yolu da yok.">BMC Helix is retiring Stackify Retrace on 31 March 2027. Because it is SaaS-only, you will not be able to log in, send data, or read stored data after that date. There is no automated migration.</p>
+    <p class="mt-3 text-slate-400" data-en="I inventory Retrace agents, profilers, log appenders and custom instrumentation in your .NET solution (including IIS / .NET Framework), replace them with OpenTelemetry, and land the data on Azure Monitor, Grafana or another OTLP backend you choose — without locking you to a single APM vendor." data-tr=".NET çözümündeki (IIS / .NET Framework dahil) Retrace ajan, profiler, log hedefi ve özel enstrümantasyonu envanterleyip OpenTelemetry ile değiştiriyorum; veriyi Azure Monitor, Grafana veya seçtiğiniz başka bir OTLP hedefine bırakıyorum — tek bir APM satıcısına kilitlemeden.">I inventory Retrace agents, profilers, log appenders and custom instrumentation in your .NET solution (including IIS / .NET Framework), replace them with OpenTelemetry, and land the data on Azure Monitor, Grafana or another OTLP backend you choose — without locking you to a single APM vendor.</p>
+    <p class="mt-3 text-sm text-slate-500" data-en="Source: " data-tr="Kaynak: ">Source: <a href="https://docs.stackify.com/docs/stackify-end-of-life-customer-letter" class="underline hover:text-slate-300" target="_blank" rel="noopener">Stackify End of Life Customer Letter</a></p>
+
+    <h3 class="mt-10 text-xl font-semibold" data-en="Retrace Exit packages" data-tr="Retrace Exit paketleri">Retrace Exit packages</h3>
+    <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="rounded-xl border border-slate-700 bg-slate-950/80 p-5">
+        <h4 class="font-semibold" data-en="Retrace Exit scanner" data-tr="Retrace Exit tarayıcı">Retrace Exit scanner</h4>
+        <p class="mt-2 text-2xl font-bold text-emerald-400" data-en="Free" data-tr="Ücretsiz">Free</p>
+        <p class="text-sm text-slate-400" data-en="Open source · MIT" data-tr="Açık kaynak · MIT">Open source · MIT</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300 list-disc pl-4">
+          <li data-en="Scans .NET solution for Stackify packages, configs, profiler env vars" data-tr=".NET çözümünü Stackify paketleri, config'ler, profiler ortam değişkenleri için tarar">Scans .NET solution for Stackify packages, configs, profiler env vars</li>
+          <li data-en="Markdown/HTML report with migration checklist" data-tr="Göç kontrol listesiyle Markdown/HTML rapor">Markdown/HTML report with migration checklist</li>
+          <li data-en="Does not change code or send data externally" data-tr="Kodu değiştirmez, dışarıya veri göndermez">Does not change code or send data externally</li>
+        </ul>
+        <a href="https://github.com/aykutmayali/retrace-exit" target="_blank" rel="noopener" class="mt-4 inline-block text-sm text-emerald-400 hover:underline" data-en="View on GitHub →" data-tr="GitHub'da gör →">View on GitHub →</a>
+      </div>
+      <div class="rounded-xl border border-slate-700 bg-slate-950/80 p-5">
+        <h4 class="font-semibold" data-en="Inventory &amp; migration plan" data-tr="Envanter ve geçiş planı">Inventory &amp; migration plan</h4>
+        <p class="mt-2 text-2xl font-bold">$200–500</p>
+        <p class="text-sm text-slate-400" data-en="10–25k TL · 1–3 days" data-tr="10–25 bin TL · 1–3 gün">10–25k TL · 1–3 days</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300 list-disc pl-4">
+          <li data-en="Run scanner on your code" data-tr="Tarayıcıyı kodunuzda çalıştırma">Run scanner on your code</li>
+          <li data-en="Map Retrace features you use (traces, logs, errors, metrics, alerts)" data-tr="Kullandığınız Retrace özelliklerini haritalandırma (izler, loglar, hatalar, metrikler, uyarılar)">Map Retrace features you use (traces, logs, errors, metrics, alerts)</li>
+          <li data-en="Backend shortlist, export checklist, wave plan" data-tr="Backend kısa listesi, dışa aktarma kontrol listesi, dalga planı">Backend shortlist, export checklist, wave plan</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border-2 border-emerald-500 bg-slate-950/80 p-5">
+        <p class="text-xs font-semibold text-emerald-400 uppercase" data-en="Hands-on migration" data-tr="Uygulamalı geçiş">Hands-on migration</p>
+        <h4 class="font-semibold" data-en="App-group migration" data-tr="Uygulama grubu geçişi">App-group migration</h4>
+        <p class="mt-2 text-2xl font-bold">$400–1,500</p>
+        <p class="text-sm text-slate-400" data-en="20–75k TL · per app group" data-tr="20–75 bin TL · uygulama grubu başı">20–75k TL · per app group</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300 list-disc pl-4">
+          <li data-en="1–3 services: OTel, Collector, backend (Azure Monitor, Grafana, etc.)" data-tr="1–3 servis: OTel, Collector, backend (Azure Monitor, Grafana vb.)">1–3 services: OTel, Collector, backend (Azure Monitor, Grafana, etc.)</li>
+          <li data-en="Basic dashboard, 3–5 alerts, log-trace correlation" data-tr="Temel pano, 3–5 uyarı, log-iz korelasyonu">Basic dashboard, 3–5 alerts, log-trace correlation</li>
+          <li data-en="Dual-run with Retrace, then agent removal" data-tr="Retrace ile çift çalışma, sonra ajan kaldırma">Dual-run with Retrace, then agent removal</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-slate-700 bg-slate-950/80 p-5">
+        <h4 class="font-semibold" data-en="Monthly care" data-tr="Aylık bakım">Monthly care</h4>
+        <p class="mt-2 text-2xl font-bold" data-en="$150–400/mo" data-tr="150–400$/ay">$150–400/mo</p>
+        <p class="text-sm text-slate-400" data-en="8–20k TL · cancel anytime" data-tr="8–20 bin TL · istediğiniz zaman iptal">8–20k TL · cancel anytime</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300 list-disc pl-4">
+          <li data-en="Sampling tuning, dashboard cards, alert noise reduction" data-tr="Örnekleme ayarı, pano kartları, uyarı gürültüsü azaltma">Sampling tuning, dashboard cards, alert noise reduction</li>
+          <li data-en="Collector/SDK version updates" data-tr="Collector/SDK sürüm güncellemeleri">Collector/SDK version updates</li>
+          <li data-en="Small instrumentation additions" data-tr="Küçük enstrümantasyon eklemeleri">Small instrumentation additions</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-8 p-4 rounded-lg bg-orange-500/10 border border-orange-500/30">
+      <p class="text-orange-300 font-semibold" data-en="🎯 2 discounted pilot slots available" data-tr="🎯 2 indirimli pilot yeri mevcut">🎯 2 discounted pilot slots available</p>
+      <p class="mt-1 text-sm text-slate-400" data-en="First two migrations at the lower end of pricing in exchange for a written reference. Limited availability before March 2027 deadline." data-tr="Yazılı referans karşılığında ilk iki geçiş fiyat aralığının alt bandından. Mart 2027 bitiş tarihinden önce sınırlı kontenjan.">First two migrations at the lower end of pricing in exchange for a written reference. Limited availability before March 2027 deadline.</p>
+    </div>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="https://cal.com/aykut-ovvudn/15min" class="px-5 py-3 rounded-lg bg-emerald-500 text-slate-950 font-semibold hover:bg-emerald-400" data-en="Book a 15-min Retrace check" data-tr="15 dakikalık Retrace kontrolü ayarla">Book a 15-min Retrace check</a>
+      <a href="https://github.com/aykutmayali/retrace-exit" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg border border-slate-700 hover:border-slate-500" data-en="Get the free scanner" data-tr="Ücretsiz tarayıcıyı al">Get the free scanner</a>
+    </div>
+
+    <p class="mt-6 text-xs text-slate-500" data-en="Honest note: OpenTelemetry does not replicate Retrace's method-level call trees, first-chance exceptions or query parameter capture. I will be explicit about these differences in the plan." data-tr="Dürüst not: OpenTelemetry, Retrace'in metot düzeyinde çağrı ağaçlarını, first-chance exception'larını veya sorgu parametresi yakalamayı birebir tekrarlamaz. Bu farkları planda açıkça belirtirim.">Honest note: OpenTelemetry does not replicate Retrace's method-level call trees, first-chance exceptions or query parameter capture. I will be explicit about these differences in the plan.</p>
   </div>
 </section>
 
