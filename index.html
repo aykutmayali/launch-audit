@@ -23,6 +23,7 @@
       <a href="#checks" data-en="What I check" data-tr="Neyi kontrol ediyorum">What I check</a>
       <a href="#packages" data-en="Packages" data-tr="Paketler">Packages</a>
       <a href="#retrace-exit" data-en="Retrace Exit" data-tr="Retrace Exit">Retrace Exit</a>
+      <a href="#ls-exit" data-en="LS Exit" data-tr="LS Exit">LS Exit</a>
       <a href="#sample-audit" data-en="Sample audit" data-tr="Örnek rapor">Sample audit</a>
       <a href="#faq" data-en="FAQ" data-tr="SSS">FAQ</a>
     </nav>
@@ -188,6 +189,79 @@
     </div>
 
     <p class="mt-6 text-xs text-slate-500" data-en="Honest note: OpenTelemetry does not replicate Retrace's method-level call trees, first-chance exceptions or query parameter capture. I will be explicit about these differences in the plan." data-tr="Dürüst not: OpenTelemetry, Retrace'in metot düzeyinde çağrı ağaçlarını, first-chance exception'larını veya sorgu parametresi yakalamayı birebir tekrarlamaz. Bu farkları planda açıkça belirtirim.">Honest note: OpenTelemetry does not replicate Retrace's method-level call trees, first-chance exceptions or query parameter capture. I will be explicit about these differences in the plan.</p>
+  </div>
+</section>
+
+<!-- LS EXIT -->
+<section id="ls-exit" class="max-w-6xl mx-auto px-5 py-16">
+  <div class="rounded-2xl border border-yellow-500/30 bg-gradient-to-br from-slate-900 to-slate-950 p-8 md:p-10">
+    <p class="text-yellow-400 text-sm font-semibold uppercase tracking-wider" data-en="Lemon Squeezy Shutdown · Payment Processing Ends March 31, 2027" data-tr="Lemon Squeezy Kapanışı · Ödeme İşleme Son Gün 31 Mart 2027">Lemon Squeezy Shutdown · Payment Processing Ends March 31, 2027</p>
+    <h2 class="mt-3 text-3xl md:text-4xl font-bold" data-en="Lemon Squeezy is shutting down: move before March 31 without breaking subscriptions or license keys" data-tr="Lemon Squeezy kapanıyor: abonelikleri ve lisans anahtarlarını bozmadan 31 Mart öncesi taşının">Lemon Squeezy is shutting down: move before March 31 without breaking subscriptions or license keys</h2>
+    <p class="mt-4 text-slate-300 text-lg max-w-3xl" data-en="Lemon Squeezy announced on Nov 16, 2026 that it is shutting down. The migration tool opens Dec 2, 2026; payment processing stops Mar 31, 2027 with no extension. Stripe Managed Payments excludes Türkiye and several other countries — and drops license keys, file downloads, PayPal, and affiliates." data-tr="Lemon Squeezy 16 Kasım 2026'da kapanacağını duyurdu. Göç aracı 2 Aralık 2026'da açılıyor; ödeme işleme 31 Mart 2027'de uzatmasız sona eriyor. Stripe Managed Payments Türkiye ve diğer bazı ülkeleri desteklemiyor — ayrıca lisans anahtarı, dosya teslimi, PayPal ve affiliate sistemlerini kapsamıyor.">Lemon Squeezy announced on Nov 16, 2026 that it is shutting down. The migration tool opens Dec 2, 2026; payment processing stops Mar 31, 2027 with no extension. Stripe Managed Payments excludes Türkiye and several other countries — and drops license keys, file downloads, PayPal, and affiliates.</p>
+    <p class="mt-3 text-slate-400" data-en="I audit your codebase with my open-source ls-exit scanner, pick the right Merchant of Record (Polar, Paddle, Dodo Payments, or Creem), and run a dual-provider cutover so zero subscribers or desktop installs break." data-tr="Açık kaynak ls-exit tarayıcısıyla kodunuzu inceliyor, ülkenize ve ürününüze uygun yeni Merchant of Record'u (Polar, Paddle, Dodo Payments veya Creem) seçiyor ve çift-sağlayıcı geçişle sıfır kesintiyle taşıyorum.">I audit your codebase with my open-source ls-exit scanner, pick the right Merchant of Record (Polar, Paddle, Dodo Payments, or Creem), and run a dual-provider cutover so zero subscribers or desktop installs break.</p>
+    <p class="mt-3 text-sm text-slate-500" data-en="Sources: " data-tr="Kaynaklar: ">Sources: <a href="https://www.lemonsqueezy.com/blog/saying-goodbye-to-lemon-squeezy" class="underline hover:text-slate-300" target="_blank" rel="noopener">Lemon Squeezy blog</a>, <a href="https://docs.lemonsqueezy.com/migration/faq" class="underline hover:text-slate-300" target="_blank" rel="noopener">Migration FAQ</a></p>
+
+    <h3 class="mt-10 text-xl font-semibold" data-en="LS Exit packages" data-tr="LS Exit paketleri">LS Exit packages</h3>
+    <div class="mt-6 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="rounded-xl border border-slate-700 bg-slate-950/80 p-5">
+        <h4 class="font-semibold" data-en="ls-exit scanner" data-tr="ls-exit tarayıcı">ls-exit scanner</h4>
+        <p class="mt-2 text-2xl font-bold text-emerald-400" data-en="Free" data-tr="Ücretsiz">Free</p>
+        <p class="text-sm text-slate-400" data-en="Open source · MIT" data-tr="Açık kaynak · MIT">Open source · MIT</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300 list-disc pl-4">
+          <li data-en="Scans your repo for Lemon Squeezy integrations (checkout, webhooks, lemon.js)" data-tr="Repoyu Lemon Squeezy entegrasyonları için tarar (checkout, webhook, lemon.js)">Scans your repo for Lemon Squeezy integrations (checkout, webhooks, lemon.js)</li>
+          <li data-en="Reports license key usage, file delivery, and subscription patterns" data-tr="Lisans anahtarı kullanımı, dosya teslimi ve abonelik kalıplarını raporlar">Reports license key usage, file delivery, and subscription patterns</li>
+          <li data-en="Does not change code or send data externally" data-tr="Kodu değiştirmez, dışarıya veri göndermez">Does not change code or send data externally</li>
+        </ul>
+        <p class="mt-3 text-xs text-slate-500 font-mono">npx github:aykutmayali/ls-exit</p>
+        <a href="https://github.com/aykutmayali/ls-exit" target="_blank" rel="noopener" class="mt-3 inline-block text-sm text-emerald-400 hover:underline" data-en="View on GitHub →" data-tr="GitHub'da gör →">View on GitHub →</a>
+      </div>
+      <div class="rounded-xl border border-slate-700 bg-slate-950/80 p-5">
+        <h4 class="font-semibold" data-en="Migration Audit" data-tr="Göç Denetimi">Migration Audit</h4>
+        <p class="mt-2 text-2xl font-bold">$249</p>
+        <p class="text-sm text-slate-400" data-en="~12.500 TL · 48 hours" data-tr="~12.500 TL · 48 saat">~12.500 TL · 48 hours</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300 list-disc pl-4">
+          <li data-en="Full codebase scan + store export review" data-tr="Tam kod taraması + mağaza dışa aktarma incelemesi">Full codebase scan + store export review</li>
+          <li data-en="Verified MoR pick for your country/product" data-tr="Ülkenize/ürününüze uygun MoR seçimi">Verified MoR pick for your country/product</li>
+          <li data-en="file:line migration plan" data-tr="dosya:satır göç planı">file:line migration plan</li>
+          <li data-en="100% credited if you upgrade" data-tr="Devam paketinde %100 mahsup">100% credited if you upgrade</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border-2 border-emerald-500 bg-slate-950/80 p-5">
+        <p class="text-xs font-semibold text-emerald-400 uppercase" data-en="Hands-on migration" data-tr="Uygulamalı geçiş">Hands-on migration</p>
+        <h4 class="font-semibold" data-en="Standard Cutover" data-tr="Standart Geçiş">Standard Cutover</h4>
+        <p class="mt-2 text-2xl font-bold">$699</p>
+        <p class="text-sm text-slate-400" data-en="~35.000 TL · 5–7 days" data-tr="~35.000 TL · 5–7 gün">~35.000 TL · 5–7 days</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300 list-disc pl-4">
+          <li data-en="Catalog rebuilt (products, prices, coupons)" data-tr="Katalog aktarımı (ürünler, fiyatlar, kuponlar)">Catalog rebuilt (products, prices, coupons)</li>
+          <li data-en="lemon.js &amp; checkout links swapped" data-tr="lemon.js ve checkout linkleri değiştirilir">lemon.js &amp; checkout links swapped</li>
+          <li data-en="Verified webhooks wired, sandbox UAT" data-tr="Webhook doğrulama, sandbox UAT">Verified webhooks wired, sandbox UAT</li>
+          <li data-en="Dual-run cutover, 14 days support" data-tr="Çift-koşu kesimi, 14 gün destek">Dual-run cutover, 14 days support</li>
+        </ul>
+      </div>
+      <div class="rounded-xl border border-slate-700 bg-slate-950/80 p-5">
+        <h4 class="font-semibold" data-en="Complex: Subscriptions + License Keys" data-tr="Karmaşık: Abonelik + Lisans Anahtarı">Complex: Subscriptions + License Keys</h4>
+        <p class="mt-2 text-2xl font-bold" data-en="from $1,490" data-tr="1.490$'dan">from $1,490</p>
+        <p class="text-sm text-slate-400" data-en="~75.000 TL · 2–3 weeks" data-tr="~75.000 TL · 2–3 hafta">~75.000 TL · 2–3 weeks</p>
+        <ul class="mt-3 space-y-1 text-sm text-slate-300 list-disc pl-4">
+          <li data-en="Card subscription import coordination" data-tr="Kart abonelik devri koordinasyonu">Card subscription import coordination</li>
+          <li data-en="PayPal re-subscribe flow" data-tr="PayPal yenileme akışı">PayPal re-subscribe flow</li>
+          <li data-en="Drop-in legacy /v1/licenses/validate endpoint" data-tr="Eski /v1/licenses/validate uyumluluk endpoint'i">Drop-in legacy /v1/licenses/validate endpoint</li>
+          <li data-en="30 days support" data-tr="30 gün destek">30 days support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-6 p-4 rounded-lg bg-slate-800/50 border border-slate-700">
+      <p class="text-slate-300 font-semibold" data-en="Post-migration monitoring" data-tr="Göç sonrası izleme">Post-migration monitoring</p>
+      <p class="mt-1 text-sm text-slate-400" data-en="~$90/mo (~4.500 TL): webhook health checks, failed payment alerts, license validation logs." data-tr="~90$/ay (~4.500 TL): webhook sağlık kontrolleri, başarısız ödeme uyarıları, lisans doğrulama logları.">~$90/mo (~4.500 TL): webhook health checks, failed payment alerts, license validation logs.</p>
+    </div>
+
+    <div class="mt-8 flex flex-wrap gap-3">
+      <a href="https://cal.com/aykut-ovvudn/15min" class="px-5 py-3 rounded-lg bg-emerald-500 text-slate-950 font-semibold hover:bg-emerald-400" data-en="Book a free 15-min check" data-tr="Ücretsiz 15 dk ön görüşme">Book a free 15-min check</a>
+      <a href="https://github.com/aykutmayali/ls-exit" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg border border-slate-700 hover:border-slate-500" data-en="Run the open-source scanner" data-tr="Açık kaynak tarayıcıyı çalıştır">Run the open-source scanner</a>
+    </div>
+
+    <p class="mt-6 text-xs text-slate-500" data-en="Honest note: Subscription imports depend on your destination provider's API — I cannot guarantee all cards will transfer without customer re-entry. License key continuity uses a lightweight proxy; native provider keys may differ in format." data-tr="Dürüst not: Abonelik aktarımı hedef sağlayıcının API'sine bağlıdır — tüm kartların müşteri tekrar girişi olmadan aktarılacağını garanti edemem. Lisans anahtarı sürekliliği hafif bir proxy kullanır; yerel sağlayıcı anahtarları format olarak farklı olabilir.">Honest note: Subscription imports depend on your destination provider's API — I cannot guarantee all cards will transfer without customer re-entry. License key continuity uses a lightweight proxy; native provider keys may differ in format.</p>
   </div>
 </section>
 
